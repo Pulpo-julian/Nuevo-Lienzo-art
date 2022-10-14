@@ -34,7 +34,6 @@
 <div class="flex_container">
     <%if (items != null && items.size() > 0) { int i = 0; int valorTotal = 0;%>
 
-    <h1>Tus productos agregados</h1>
 
     <% for(ItemProducto item: items){ Producto producto = productos.get(i++);%>
 
@@ -70,13 +69,13 @@
                 </div>
 
                 <div class ="valor-total">
-                    <h4>valor total: </h4>
-                    <h3><%out.print(item.getCantProducto() * item.getValorProducto());%></h3>
+                    <h4>Valor total: </h4>
+                    <h4><%out.print(item.getCantProducto() * item.getValorProducto());%></h4>
                     <%valorTotal += item.getCantProducto() * item.getValorProducto();%>
                 </div>
 
 
-                <a href="${pageContext.request.contextPath}/eliminar-producto?codpro=<%out.print(producto.getCodigo());%>" class="carrito">Eliminar Producto</a>
+                <a href="${pageContext.request.contextPath}/eliminar-producto?codpro=<%out.print(producto.getCodigo());%>" class="eliminar">Eliminar Producto</a>
             </div>
 
         </div>
